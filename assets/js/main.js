@@ -216,4 +216,29 @@
 				$window.trigger('resize');
 			});
 
+			$('body').on("mousewheel", function(){
+				event.preventDefault();
+
+				var wheelDelta = event.wheelDelta;
+
+				var currentScrollPosition = window.pageYOffset;
+				window.scrollTo(0, currentScrollPosition - wheelDelta);
+			});
+
+			/*$('body').keydown(function (e)){
+				e.preventDefault();
+				var currentScrollPosition = window.pageYOffset;
+
+				switch (e.which) {
+					case 38:
+						window.scrollTo(0, currentScrollPosition -120);
+						break;
+					case 40:
+						window.scrollTo(0, currentScrollPosition + 120);
+						break;
+					default:
+						return;
+				}
+			}*/
+
 })(jQuery);

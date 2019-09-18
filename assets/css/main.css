@@ -2277,6 +2277,7 @@ input, select, textarea {
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
+		padding-top: 30px;
 	}
 
 		#contact .box {
@@ -2313,3 +2314,45 @@ input, select, textarea {
 			}
 
 		}
+
+
+		#shop {
+			overflow: hidden;
+			padding-bottom: 0;
+			padding-top: 30px;
+		}
+
+			#shop .box {
+				-moz-transition: -moz-transform 1s ease;
+				-webkit-transition: -webkit-transform 1s ease;
+				-ms-transition: -ms-transform 1s ease;
+				transition: transform 1s ease;
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				position: relative;
+			}
+
+			#shop.inactive .box {
+				-moz-transform: translateY(100%);
+				-webkit-transform: translateY(100%);
+				-ms-transform: translateY(100%);
+				transform: translateY(100%);
+			}
+
+			@media screen and (max-width: 736px) {
+
+				#shop .box {
+					padding: 1.5em 1.5em 2em 1.5em;
+				}
+
+			}
+
+			@media screen and (max-width: 480px) {
+
+				#shop .box {
+					padding: 1em 1em 2em 1em;
+				}
+
+			}
